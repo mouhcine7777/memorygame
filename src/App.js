@@ -52,25 +52,34 @@ const App = () => {
   };
 
   const handleCardClick = (id) => {
-    if (isFlipping || flipped.length === 2 || matched.includes(id) || previewMode) return;
+    if (
+      isFlipping || 
+      flipped.length === 2 || 
+      matched.includes(id) || 
+      previewMode || 
+      flipped.includes(id)
+    ) return;
 
+    setIsFlipping(true);
     const newFlipped = [...flipped, id];
     setFlipped(newFlipped);
 
     if (newFlipped.length === 2) {
       const [first, second] = newFlipped.map((idx) => cards[idx]);
-      if (first.image === second.image) {
-        setMatched((prev) => [...prev, first.id, second.id]);
-        if (matched.length + 2 === cards.length) {
-          setShowScore(true);
-          return; // Exit early if all pairs are matched
-        }
-      }
-      setIsFlipping(true);
+      
       setTimeout(() => {
+        if (first.image === second.image) {
+          setMatched(prev => [...prev, first.id, second.id]);
+          setFlipped([]);
+          if (matched.length + 2 === cards.length) {
+            setShowScore(true);
+          }
+        }
         setFlipped([]);
         setIsFlipping(false);
       }, 1000);
+    } else {
+      setIsFlipping(false);
     }
   };
 
