@@ -1,7 +1,7 @@
 /* General Reset */
 body {
   font-family: Arial, sans-serif;
-  background: url("https://www.paloozaland.com/wp-content/uploads/2024/12/Background-Logo-S.png")
+  background: url("../public/Background-Logo-S.png")
     no-repeat;
   background-size: cover;
   margin: 0;
@@ -40,7 +40,7 @@ body {
 }
 
 .countdown-background {
-  background-image: url("https://www.paloozaland.com/wp-content/uploads/2024/12/bouton.png");
+  background-image: url("../public/bouton.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -112,7 +112,7 @@ body {
 
 /* Add Background Image for Unflipped Cards */
 .front {
-  background-image: url("https://www.paloozaland.com/wp-content/uploads/2024/12/BG-Bouton.png");
+  background-image: url("../public/BG-Bouton.png");
   background-size: cover;
   background-position: center;
   transform: rotateY(0);

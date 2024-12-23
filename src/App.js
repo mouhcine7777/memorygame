@@ -5,26 +5,26 @@ const App = () => {
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
-  const [isFlipping, setIsFlipping] = useState(false);
+  const [isFlipping,  setIsFlipping] = useState(false);
   const [previewTimeLeft, setPreviewTimeLeft] = useState(10);
   const [showScore, setShowScore] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [previewMode, setPreviewMode] = useState(true);
 
   const images = [
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/mobile.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/router.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/signal.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/smart-car.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/smart-home.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/smartwatch.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/camera.png",
-    "https://www.paloozaland.com/wp-content/uploads/2024/12/game-console.png",
+    "../mobile.png",
+    "../router.png",
+    "../signal.png",
+    "../smart-car.png",
+    "../smart-home.png",
+    "../smartwatch.png",
+    "../camera.png",
+    "../game-console.png",
   ];
 
   const startGame = () => {
     document.body.style.background =
-      'url("https://www.paloozaland.com/wp-content/uploads/2024/12/Background.png") no-repeat center center fixed';
+      'url("../Background.png") no-repeat center center fixed';
     document.body.style.backgroundSize = "cover";
 
     const shuffledCards = [...images, ...images]
@@ -89,7 +89,7 @@ const App = () => {
         <div className="start-screen">
           <button className="start-button" onClick={startGame}>
             <img
-              src="https://www.paloozaland.com/wp-content/uploads/2024/12/Bouton-Start.png"
+              src="../Bouton-Start.png"
               alt="Start Game"
               className="start-button-image"
             />
@@ -142,7 +142,7 @@ const App = () => {
           ) : (
             <div className="popup">
               <img
-                src="https://www.paloozaland.com/wp-content/uploads/2024/12/Num-13.png"
+                src="../Num13.png"
                 alt="Congratulations"
                 className="popup-image"
               />
